@@ -4,7 +4,7 @@ api <<<
   disabled: disabled = process.platform != 'win32'
   n-api: n-api = !!process.versions.napi
     and api == require \../fallback
-    and not api.electron = do require \is-electron
+    and not api.electron = (require \electron-util/node).isElectron
   der2: der2 = require \./der2
   hash: hash
   inject: inject

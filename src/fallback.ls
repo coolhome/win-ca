@@ -2,7 +2,12 @@
 
 require! <[ path child_process split ]>
 
-bin = path.join __dirname, 'roots.exe'
+const electron = require \electron-util/node
+
+if electron.isUsingAsar
+  bin = electron.fixPathForAsarUnpack(path.join __dirname, 'roots.exe')
+else
+  bin = path.join __dirname, 'roots.exe'
 
 export !function sync(args)
   return {run, next, done}

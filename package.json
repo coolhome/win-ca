@@ -38,7 +38,7 @@
     "fallback"
   ],
   "dependencies": {
-    "is-electron": "^2.2.0",
+    "electron-util": "^0.14.2",
     "make-dir": "^1.3.0",
     "node-forge": "^0.8.2",
     "split": "^1.0.1"
